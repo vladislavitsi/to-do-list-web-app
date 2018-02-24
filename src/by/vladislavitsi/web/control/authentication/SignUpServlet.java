@@ -1,6 +1,7 @@
 package by.vladislavitsi.web.control.authentication;
 
-import by.vladislavitsi.web.ApplicationContext;
+import by.vladislavitsi.web.control.ApplicationContext;
+import by.vladislavitsi.web.control.app.AbstractPostOnlyServlet;
 import by.vladislavitsi.web.control.exceptions.DAOException;
 import by.vladislavitsi.web.control.exceptions.ProfileExistsException;
 
@@ -8,11 +9,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.IOException;
 
-import static by.vladislavitsi.web.Constants.*;
+import static by.vladislavitsi.web.util.Constants.*;
 
-public class SignUpServlet extends HttpServlet {
+public class SignUpServlet extends AbstractPostOnlyServlet {
 
-    private void signUp(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    @Override
+    protected void performRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             String login = request.getParameter(USER_LOGIN);
             String pass = request.getParameter(USER_PASSWORD);
@@ -32,14 +34,5 @@ public class SignUpServlet extends HttpServlet {
             request.setAttribute(ATTRIBUTE_INFO, MESSAGE_SOMETHING_WENT_WRONG);
             request.getRequestDispatcher(PAGE_SIGNUP).forward(request, response);
         }
-    }
-
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        signUp(req, resp);
-    }
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        signUp(req, resp);
     }
 }

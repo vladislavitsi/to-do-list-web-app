@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="css/modalTask.css">
+<script src="js/taskModal.js"></script>
+<div id="myModal" class="modal">
+    <div id="modal-content" class="modal-content">
+        <input id="id" type="text" value="0" hidden>
+        <form onsubmit="return modal.saveTask()">
+            <input id="task-text" type="text">
+        </form>
+        <div id="tool-panel" class="tool-panel">
+
+            <div id="data-panel" class="modal-panel">
+                <div class="modal-panel-header">
+                    Date:
+                </div>
+                <input id="date" type="date" name="calendar">
+            </div>
+
+
+            <div id="action-panel" class="modal-panel">
+                <div class="modal-panel-header">
+                    Action:
+                </div>
+                <div class="modal-action">
+                    Done:
+                    <input id="done-check" type="checkbox">
+                </div>
+                <div class="modal-action">
+                    Delete:
+                    <input id="delete-check" type="checkbox">
+                </div>
+            </div>
+
+                <button onclick="modal.saveTask()" class="save">
+                    Save
+                </button>
+                <button onclick="modal.closeModal()" class="cancel">
+                    Cancel
+                </button>
+
+        </div>
+    </div>
+</div>
+<script>
+    modal.init();
+</script>
+
+

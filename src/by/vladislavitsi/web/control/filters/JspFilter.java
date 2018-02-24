@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static by.vladislavitsi.web.Constants.*;
+import static by.vladislavitsi.web.util.Constants.*;
 
 public class JspFilter implements Filter {
 

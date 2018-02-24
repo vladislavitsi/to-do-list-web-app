@@ -1,0 +1,55 @@
+/* The Modal (background) */
+.myFileModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-file-content {
+    background-color: white;
+    width: 300px;
+    height: 100px;
+    margin: 5% auto;
+}
+
+#modal-file-header{
+    padding-top: 10px;
+    font: 16px regular,sans-serif;
+    text-align: center;
+}
+
+#choose-file, #upload-progress, #file-bar{
+    width: 90%;
+    display: none;
+    margin: auto;
+    padding: 10px;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}

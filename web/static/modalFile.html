@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="css/modalFile.css">
+<script src="js/fileModal.js"></script>
+<div id="myFileModal" class="myFileModal">
+    <div id="modal-file-content" class="modal-file-content">
+        <div id="modal-file-header">File manager</div>
+
+        <input id="choose-file" type="file">
+
+
+        <div id="upload-progress">
+            Progress <span id="progress-percents">0</span>%
+        </div>
+
+
+        <div id="file-bar">
+            <div id="file-name">
+
+            </div>
+            <button class="download-file-button" onclick="fileModal.downloadFile()">
+                Download
+            </button>
+            <button class="delete-file-button" onclick="fileModal.deleteFile();">
+                Delete
+            </button>
+        </div>
+
+
+    </div>
+</div>
+<script>
+    fileModal.init();
+</script>
+
