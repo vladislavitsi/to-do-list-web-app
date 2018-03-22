@@ -1,6 +1,6 @@
 package by.vladislavitsi.web.control.file;
 
-import by.vladislavitsi.web.control.ApplicationContext;
+import by.vladislavitsi.web.control.app.ApplicationContext;
 import by.vladislavitsi.web.control.app.AbstractPostOnlyServlet;
 import by.vladislavitsi.web.control.exceptions.DAOException;
 import org.apache.commons.codec.digest.DigestUtils;

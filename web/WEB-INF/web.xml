@@ -14,7 +14,7 @@
 
     <!--Specification-->
     <listener>
-        <listener-class>by.vladislavitsi.web.control.ApplicationContext</listener-class>
+        <listener-class>by.vladislavitsi.web.control.app.ApplicationContext</listener-class>
     </listener>
 
     <env-entry>

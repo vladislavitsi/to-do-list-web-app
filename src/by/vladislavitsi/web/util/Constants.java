@@ -1,6 +1,6 @@
 package by.vladislavitsi.web.util;
 
-import by.vladislavitsi.web.control.ApplicationContext;
+import by.vladislavitsi.web.control.app.ApplicationContext;
 
 public class Constants {
     public static final String PAGE_HEADER = ApplicationContext.getStringResource("page.header");

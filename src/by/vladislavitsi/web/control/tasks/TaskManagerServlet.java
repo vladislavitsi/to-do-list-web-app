@@ -1,6 +1,6 @@
 package by.vladislavitsi.web.control.tasks;
 
-import by.vladislavitsi.web.control.ApplicationContext;
+import by.vladislavitsi.web.control.app.ApplicationContext;
 import by.vladislavitsi.web.control.app.AbstractPostOnlyServlet;
 import by.vladislavitsi.web.control.exceptions.DAOException;
 import by.vladislavitsi.web.model.task.Task;
@@ -27,7 +27,6 @@ public class TaskManagerServlet extends AbstractPostOnlyServlet {
             Action.valueOf(request.getParameter(ATTRIBUTE_ACTION).toUpperCase()).performRequest(request, response);
         } catch (DAOException e) {
             System.out.println(e.getMessage());
-            System.out.println(e.getCause().toString());
         }
     }
 

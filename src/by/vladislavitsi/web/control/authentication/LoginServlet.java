@@ -1,6 +1,6 @@
 package by.vladislavitsi.web.control.authentication;
 
-import by.vladislavitsi.web.control.ApplicationContext;
+import by.vladislavitsi.web.control.app.ApplicationContext;
 import by.vladislavitsi.web.control.app.AbstractPostOnlyServlet;
 import by.vladislavitsi.web.control.exceptions.DAOException;
 import by.vladislavitsi.web.model.user.User;
@@ -24,7 +24,6 @@ public class LoginServlet extends AbstractPostOnlyServlet {
                 request.getRequestDispatcher(PAGE_ROOT).forward(request, response);
                 return;
             }
-
             User user = ApplicationContext.getUserDAOImpl().getUser(login, pass);
             session.setAttribute(ATTRIBUTE_USER, user);
 
@@ -42,12 +41,10 @@ public class LoginServlet extends AbstractPostOnlyServlet {
             response.sendRedirect(PAGE_ROOT);
         }catch (WrongAuthenticationException e){
             System.err.println(e.getMessage());
-            System.err.println(e.getCause().toString());
             request.setAttribute(ATTRIBUTE_INFO, EXCEPTION_INVALID_LOGIN);
             request.getRequestDispatcher(PAGE_LOGIN).forward(request, response);
         } catch (DAOException e) {
             System.err.println(e.getMessage());
-            System.err.println(e.getCause().toString());
             request.setAttribute(ATTRIBUTE_INFO, MESSAGE_SOMETHING_WENT_WRONG);
             request.getRequestDispatcher(PAGE_LOGIN).forward(request, response);
         }

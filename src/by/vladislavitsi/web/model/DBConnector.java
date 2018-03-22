@@ -1,6 +1,6 @@
 package by.vladislavitsi.web.model;
 
-import by.vladislavitsi.web.control.ApplicationContext;
+import by.vladislavitsi.web.control.app.ApplicationContext;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;

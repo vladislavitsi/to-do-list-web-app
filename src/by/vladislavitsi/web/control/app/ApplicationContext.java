@@ -1,4 +1,4 @@
-package by.vladislavitsi.web.control;
+package by.vladislavitsi.web.control.app;
 
 import by.vladislavitsi.web.model.file.FileImplFactory;
 import by.vladislavitsi.web.model.file.IFileDAO;

@@ -1,6 +1,6 @@
 package by.vladislavitsi.web.model.user.impl;
 
-import by.vladislavitsi.web.control.ApplicationContext;
+import by.vladislavitsi.web.control.app.ApplicationContext;
 import by.vladislavitsi.web.control.exceptions.DAOException;
 import by.vladislavitsi.web.control.exceptions.ProfileExistsException;
 import by.vladislavitsi.web.control.exceptions.WrongAuthenticationException;
