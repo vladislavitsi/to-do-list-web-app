@@ -1,18 +1,42 @@
 .header {
-    width: 100%;
-    height: 30px;
-    margin: 0;
+    height: 40px;
+    margin: auto;
     background: white;
     border-bottom: 1px solid #E0E0E0;
 }
 
 .title{
     color: #F44336;
-    font: 25px arial, sans-serif;
+    font: 30px arial, sans-serif;
     float: left;
 }
 
 .authentication{
     text-align: right;
     font: 14px arial,sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.menu{
+    width: 200px;
+    margin: auto;
+}
+
+.menu-button{
+    display: none;
+    margin: 5px 20px;
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+
+.menu-button.is-active{
+    display: block;
+}
+
+.sign{
+    font-size: 14px;
+    font-style: italic;
+    color: black;
 }

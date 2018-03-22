@@ -6,20 +6,20 @@ import by.vladislavitsi.web.model.user.impl.RamUserDAO;
 public enum UserImplFactory {
     RAM {
         @Override
-        UserDAO getImpl() {
+        IUserDAO getImpl() {
             return new RamUserDAO();
         }
     },
     DB {
         @Override
-        UserDAO getImpl() {
+        IUserDAO getImpl() {
             return new DBUserDAO();
         }
     };
 
-    abstract UserDAO getImpl();
+    abstract IUserDAO getImpl();
 
-    public static UserDAO getImplFromFactory(String impl){
+    public static IUserDAO getImplFromFactory(String impl){
         return valueOf(impl.toUpperCase()).getImpl();
     }
 }

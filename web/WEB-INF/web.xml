@@ -14,7 +14,7 @@
 
     <!--Specification-->
     <listener>
-        <listener-class>by.vladislavitsi.web.ApplicationContext</listener-class>
+        <listener-class>by.vladislavitsi.web.control.app.ApplicationContext</listener-class>
     </listener>
 
     <env-entry>
@@ -46,7 +46,7 @@
 
     <servlet>
         <servlet-name>Main</servlet-name>
-        <servlet-class>by.vladislavitsi.web.MainServlet</servlet-class>
+        <servlet-class>by.vladislavitsi.web.control.app.MainServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Main</servlet-name>
@@ -60,6 +60,42 @@
     <servlet-mapping>
         <servlet-name>LogOut</servlet-name>
         <url-pattern>/logOut</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Control</servlet-name>
+        <servlet-class>by.vladislavitsi.web.control.tasks.TaskManagerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Control</servlet-name>
+        <url-pattern>/request</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddFile</servlet-name>
+        <servlet-class>by.vladislavitsi.web.control.file.FileAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddFile</servlet-name>
+        <url-pattern>/uploadFile</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetFile</servlet-name>
+        <servlet-class>by.vladislavitsi.web.control.file.FileGetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetFile</servlet-name>
+        <url-pattern>/getFile</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteFile</servlet-name>
+        <servlet-class>by.vladislavitsi.web.control.file.FileDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteFile</servlet-name>
+        <url-pattern>/deleteFile</url-pattern>
     </servlet-mapping>
 
     <!--Filters-->

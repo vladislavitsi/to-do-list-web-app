@@ -3,16 +3,16 @@ package by.vladislavitsi.web.model.user.impl;
 import by.vladislavitsi.web.control.exceptions.DAOException;
 import by.vladislavitsi.web.control.exceptions.ProfileExistsException;
 import by.vladislavitsi.web.control.exceptions.WrongAuthenticationException;
-import by.vladislavitsi.web.model.user.UserDAO;
+import by.vladislavitsi.web.model.user.IUserDAO;
 import by.vladislavitsi.web.model.user.User;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static by.vladislavitsi.web.Constants.EXCEPTION_INVALID_LOGIN;
-import static by.vladislavitsi.web.Constants.EXCEPTION_USER_EXIST;
+import static by.vladislavitsi.web.util.Constants.EXCEPTION_INVALID_LOGIN;
+import static by.vladislavitsi.web.util.Constants.EXCEPTION_USER_EXIST;
 
-public class RamUserDAO implements UserDAO {
+public class RamUserDAO implements IUserDAO {
 
     private static int userIdCounter = 1;
 

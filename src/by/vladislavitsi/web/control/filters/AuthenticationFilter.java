@@ -1,6 +1,6 @@
 package by.vladislavitsi.web.control.filters;
 
-import by.vladislavitsi.web.ApplicationContext;
+import by.vladislavitsi.web.control.app.ApplicationContext;
 import by.vladislavitsi.web.control.exceptions.DAOException;
 import by.vladislavitsi.web.control.exceptions.WrongAuthenticationException;
 import by.vladislavitsi.web.model.user.User;
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-import static by.vladislavitsi.web.Constants.*;
+import static by.vladislavitsi.web.util.Constants.*;
 
 public class AuthenticationFilter implements Filter {
 

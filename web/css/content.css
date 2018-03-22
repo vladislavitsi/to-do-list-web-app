@@ -1,0 +1,102 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+.tab{
+    display: none;
+    width: 100%;
+    margin: 100px auto auto;
+    font: 50px arial, sans-serif;
+}
+
+.tab.is-active{
+    display: block;
+}
+.content{
+    width: 100%;
+}
+h1{
+    font: 24px bold, Helvetica,Arial;
+    width: 93%;
+    float: left;
+    color: #F44336;
+    text-align: left;
+    margin: 0;
+}
+.tab{
+    width: 80%;
+    margin: 50px auto;
+}
+.task-list{
+    white-space: nowrap;
+    margin: auto 1.5%;
+    min-width: 350px;
+    width: 30%;
+    float: left;
+}
+.task-list.bin, .task-list.done{
+    margin: auto;
+    float: none;
+}
+
+.task-list-header {
+    font: 24px bold, Helvetica,Arial;
+    padding: 5px 5px;
+    margin: auto auto 20px;
+    border: 1px solid #F5F5F5;
+}
+
+.bin-list-header{
+    font-size: 0;
+}
+.task-list-header:hover,.task-item:hover{
+    background: #FAFAFA;
+}
+.tasks{
+    max-width: 100%;
+}
+.option{
+    padding: 0;
+    color: #F44336;
+    border: none;
+    width: 7%;
+    float: none;
+}
+
+.task-item{
+    margin: 10px 0;
+    width: 100%;
+    height: 75px;
+    max-width: 100%;
+    float: left;
+}
+.task-item a{
+    cursor: default;
+}
+.task-item-text{
+    max-width: 80%;
+    width: 70%;
+    padding: 15px 10px 15px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font: 14px normal, sans-serif;
+    float: left;
+}
+
+.delete-all{
+    width: 24px;
+    height: 24px;
+}
+
+.ticker, .file-open{
+    width: 10%;
+}
+
+
+.ticker img, .file-open img{
+    padding: 25px 10px 25px 10px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}

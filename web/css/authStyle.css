@@ -49,14 +49,14 @@ input.button:hover {
 input.field{
     background: #FFFFFF;
     border: 1px solid #BDBDBD;
-    width: 100%;
-    padding: 5px;
-}
-.info-block{
-    width: 50%;
-    margin: 20px auto auto;
-    border-top: 1px solid #BDBDBD;
-    text-align: center;
-    padding: 5px;
-    font: 15px arial,sans-serif;
-}
+        width: 100%;
+        padding: 5px;
+    }
+    .info-block{
+        width: 50%;
+        margin: 20px auto auto;
+        border-top: 1px solid #BDBDBD;
+        text-align: center;
+        padding: 5px;
+        font: 15px arial,sans-serif;
+    }

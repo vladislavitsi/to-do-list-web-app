@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="css/content.css">
+<div class="content">
+
+    <div id="tasks" class="tab is-active">
+
+        <div class="task-list">
+            <a href="JavaScript:modal.openModal('today');">
+                <div class="task-list-header">
+                    <h1>
+                        TODAY
+                    </h1>
+                    <div class="option">
+                        +
+                    </div>
+                </div>
+            </a>
+            <div id="today" class="tasks">
+            </div>
+        </div>
+
+        <div class="task-list">
+            <a href="JavaScript:modal.openModal('tomorrow');">
+                <div class="task-list-header">
+                    <h1>
+                        TOMORROW
+                    </h1>
+                    <div class="option">
+                        +
+                    </div>
+                </div>
+            </a>
+            <div id="tomorrow" class="tasks">
+            </div>
+        </div>
+
+        <div class="task-list">
+            <a href="JavaScript:modal.openModal('someday');">
+                <div class="task-list-header">
+                    <h1>
+                        SOMEDAY
+                    </h1>
+                    <div class="option">
+                        +
+                    </div>
+                </div>
+            </a>
+            <div id="someday" class="tasks">
+            </div>
+        </div>
+
+    </div>
+
+    <div id="done" class="tab">
+        <div  class="task-list done">
+            <div class="done-list-header">
+                <h1>
+                    DONE
+                </h1>
+            </div>
+            <div id="done-list" class="tasks">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="bin" class="tab">
+        <div class="task-list bin">
+            <div class="bin-list-header">
+                <h1>
+                    BIN
+                </h1>
+                <a href="JavaScript:requests.emptyBin()">
+                    <img class="delete-all" src="icon/bin_selected.png">
+                </a>
+            </div>
+            <div id="bin-list" class="tasks">
+
+            </div>
+        </div>
+    </div>
+
+</div>

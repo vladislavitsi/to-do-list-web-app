@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script type="text/javascript" src="js/utils.js"></script>
     <script type="text/javascript" src="js/authScript.js"></script>
     <script src="js/sha256.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/authStyle.css"/>

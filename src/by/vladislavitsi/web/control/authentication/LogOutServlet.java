@@ -1,37 +1,29 @@
 package by.vladislavitsi.web.control.authentication;
 
-import by.vladislavitsi.web.ApplicationContext;
+import by.vladislavitsi.web.control.app.AbstractPostOnlyServlet;
+import by.vladislavitsi.web.control.app.AbstractServlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.IOException;
 
-import static by.vladislavitsi.web.Constants.*;
+import static by.vladislavitsi.web.util.Constants.*;
 
-public class LogOutServlet extends HttpServlet {
+public class LogOutServlet extends AbstractServlet {
 
     private static final String EMPTY_STRING = "";
-
-    private void processRequest(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        req.getSession().invalidate();
+    @Override
+    protected void performRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getSession().invalidate();
         Cookie idCookie = new Cookie(USER_ID, EMPTY_STRING);
         idCookie.setMaxAge(MAX_COOKIE_AGE_DEAD);
-        resp.addCookie(idCookie);
+        response.addCookie(idCookie);
         Cookie loginCookie = new Cookie(USER_LOGIN, EMPTY_STRING);
         loginCookie.setMaxAge(MAX_COOKIE_AGE_DEAD);
-        resp.addCookie(loginCookie);
+        response.addCookie(loginCookie);
         Cookie tokenCookie = new Cookie(USER_TOKEN, EMPTY_STRING);
         tokenCookie.setMaxAge(MAX_COOKIE_AGE_DEAD);
-        resp.addCookie(tokenCookie);
-        resp.sendRedirect(PAGE_ROOT);
-    }
-
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        processRequest(req, resp);
-    }
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        processRequest(req, resp);
+        response.addCookie(tokenCookie);
+        response.sendRedirect(PAGE_ROOT);
     }
 }
